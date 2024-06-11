@@ -12,17 +12,17 @@ import org.springframework.web.bind.annotation.*;
 @RequiredArgsConstructor
 public class UserController {
 
-    @PostMapping
+    @PostMapping("/register")
     public ResponseEntity<?> register(){
         return ResponseEntity.ok().build();
     }
 
-    @PostMapping
+    @PostMapping("/login")
     public ResponseEntity<?> login(){
         return ResponseEntity.ok().build();
     }
 
-    @PostMapping
+    @PostMapping("/logout")
     public ResponseEntity<?> logout(){
         return ResponseEntity.ok().build();
     }

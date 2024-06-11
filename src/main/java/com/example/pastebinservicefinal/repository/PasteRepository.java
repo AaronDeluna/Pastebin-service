@@ -1,7 +1,8 @@
 package com.example.pastebinservicefinal.repository;
 
-import org.springframework.stereotype.Repository;
+import com.example.pastebinservicefinal.entity.Paste;
+import org.springframework.data.jpa.repository.JpaRepository;
 
-@Repository
-public interface PasteRepository {
+public interface PasteRepository extends JpaRepository<Paste, Integer> {
+    Paste findByTitle(String pasteTitle);
 }

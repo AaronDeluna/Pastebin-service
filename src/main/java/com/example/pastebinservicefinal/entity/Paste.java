@@ -11,7 +11,7 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-@Table(name = "pastes")
+@Table(name = "pastets")
 @AllArgsConstructor
 @NoArgsConstructor
 public class Paste {
@@ -19,22 +19,15 @@ public class Paste {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @NotNull
     @NotEmpty
     private String title;
 
+    @NotNull
     @NotEmpty
     private String content;
-
-    @NotEmpty
-    private String url;
-
-    @NotNull
-    private Long expiryDate;
 
     @NotNull
     private Boolean isPublic;
 
-    @ManyToOne
-    @JoinColumn(name = "author_id")
-    private User author;
 }
